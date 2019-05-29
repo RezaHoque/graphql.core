@@ -15,3 +15,12 @@ Run the site and browse to https://localhost:44367/ui/playground
 # call the api from postman
 Create a new "POST" request in postman.
 
+URL: https://localhost:44367/graphql
+
+Headers: Content-Type: application/json
+
+RAW Body: {
+"query":"query{authors{name,country}}"
+}
+
+
