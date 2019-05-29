@@ -1,7 +1,7 @@
 # graphql.core
 GrapgQL with asp.net core
 
-#how to run
+# how to run
 Clone the repo.
 Fix the DB connection properties on appsettings.json
 Run Update-Database in the Package Manager console.
