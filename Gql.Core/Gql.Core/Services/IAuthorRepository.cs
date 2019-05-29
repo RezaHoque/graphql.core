@@ -1,8 +1,7 @@
-﻿using System.Collections;
+﻿using Gql.Core.Data;
+using Gql.Core.Models;
 using System.Collections.Generic;
 using System.Linq;
-using Gql.Core.Data;
-using Gql.Core.Models;
 
 namespace Gql.Core.Services
 {
@@ -20,5 +19,7 @@ namespace Gql.Core.Services
             _context = context;
         }
         public IEnumerable<Author> GetAll() => _context.Authors.ToList();
+
+
     }
 }

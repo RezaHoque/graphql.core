@@ -1,15 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Gql.Core.Models;
+using Gql.Core.Services;
 using Microsoft.AspNetCore.Mvc;
-using Gql.Core.Models;
+using System.Diagnostics;
 
 namespace Gql.Core.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IAuthorRepository _authorRepo;
+        private readonly IBookRepository _bookRepo;
+
+        public HomeController(IAuthorRepository authorRepo, IBookRepository bookRepo)
+        {
+            _authorRepo = authorRepo;
+            _bookRepo = bookRepo;
+        }
         public IActionResult Index()
         {
             return View();
@@ -25,5 +30,8 @@ namespace Gql.Core.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
+
     }
 }
